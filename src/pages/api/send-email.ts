@@ -19,7 +19,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
         to: user.email,
         subject: "Email Template User Invitation Test",
         react: JualInviteUser({
-          company_name: "Apa Aja",
+          company_name: "Newest Email Template Company",
           name: user.name,
           targetRole: "Admin",
         }),
@@ -53,6 +53,18 @@ const receiver = [
   },
   {
     name: "Dito new",
-    email: "ditotisi.rasyid@praktis.co",
+    email: "dito.devs@gmail.com",
+  },
+  {
+    name: "Edric",
+    email: "edric.galentino@praktis.co",
+  },
+  {
+    name: "Thareq",
+    email: "thareq@pts.sc",
+  },
+  {
+    name: "Bryant",
+    email: "kent.bryant@praktis.co",
   },
 ];
