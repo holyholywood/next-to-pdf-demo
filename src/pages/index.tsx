@@ -24,6 +24,7 @@ export default function Home() {
   const printRef = useRef<HTMLDivElement>(null);
   const handlePrint = useReactToPrint({
     content: () => printRef.current,
+    pageStyle: "padding: 2rem 0px",
     documentTitle: "Laporan Penjualan",
     onBeforePrint: () => {
       console.info("onBeforePrint");
@@ -273,6 +274,138 @@ const ItemList: ItemListType[] = [
     status: {
       name: "Quantity Matched",
       type: "success",
+    },
+  },
+  {
+    id: 3,
+    image: "/img/dummyphoto.jpg",
+    name: "The Realset Lightweight Essence Cushin San...",
+    sku: "RAD|8997227080989",
+    qty: 9393,
+    total: 22212,
+    status: {
+      name: "Quantity Matched",
+      type: "error",
+    },
+  },
+  {
+    id: 3,
+    image: "/img/dummyphoto.jpg",
+    name: "The Realset Lightweight Essence Cushin San...",
+    sku: "RAD|8997227080989",
+    qty: 9393,
+    total: 22212,
+    status: {
+      name: "Quantity Matched",
+      type: "error",
+    },
+  },
+  {
+    id: 3,
+    image: "/img/dummyphoto.jpg",
+    name: "The Realset Lightweight Essence Cushin San...",
+    sku: "RAD|8997227080989",
+    qty: 9393,
+    total: 22212,
+    status: {
+      name: "Quantity Matched",
+      type: "error",
+    },
+  },
+  {
+    id: 3,
+    image: "/img/dummyphoto.jpg",
+    name: "The Realset Lightweight Essence Cushin San...",
+    sku: "RAD|8997227080989",
+    qty: 9393,
+    total: 22212,
+    status: {
+      name: "Quantity Matched",
+      type: "error",
+    },
+  },
+  {
+    id: 3,
+    image: "/img/dummyphoto.jpg",
+    name: "The Realset Lightweight Essence Cushin San...",
+    sku: "RAD|8997227080989",
+    qty: 9393,
+    total: 22212,
+    status: {
+      name: "Quantity Matched",
+      type: "error",
+    },
+  },
+  {
+    id: 3,
+    image: "/img/dummyphoto.jpg",
+    name: "The Realset Lightweight Essence Cushin San...",
+    sku: "RAD|8997227080989",
+    qty: 9393,
+    total: 22212,
+    status: {
+      name: "Quantity Matched",
+      type: "error",
+    },
+  },
+  {
+    id: 3,
+    image: "/img/dummyphoto.jpg",
+    name: "The Realset Lightweight Essence Cushin San...",
+    sku: "RAD|8997227080989",
+    qty: 9393,
+    total: 22212,
+    status: {
+      name: "Quantity Matched",
+      type: "error",
+    },
+  },
+  {
+    id: 3,
+    image: "/img/dummyphoto.jpg",
+    name: "The Realset Lightweight Essence Cushin San...",
+    sku: "RAD|8997227080989",
+    qty: 9393,
+    total: 22212,
+    status: {
+      name: "Quantity Matched",
+      type: "error",
+    },
+  },
+  {
+    id: 3,
+    image: "/img/dummyphoto.jpg",
+    name: "The Realset Lightweight Essence Cushin San...",
+    sku: "RAD|8997227080989",
+    qty: 9393,
+    total: 22212,
+    status: {
+      name: "Quantity Matched",
+      type: "error",
+    },
+  },
+  {
+    id: 3,
+    image: "/img/dummyphoto.jpg",
+    name: "The Realset Lightweight Essence Cushin San...",
+    sku: "RAD|8997227080989",
+    qty: 9393,
+    total: 22212,
+    status: {
+      name: "Quantity Matched",
+      type: "error",
+    },
+  },
+  {
+    id: 3,
+    image: "/img/dummyphoto.jpg",
+    name: "The Realset Lightweight Essence Cushin San...",
+    sku: "RAD|8997227080989",
+    qty: 9393,
+    total: 22212,
+    status: {
+      name: "Quantity Matched",
+      type: "error",
     },
   },
   {
