@@ -1,4 +1,5 @@
-import React, { useRef } from "react";
+import Link from "next/link";
+import React, { useRef, useState } from "react";
 import { useReactToPrint } from "react-to-print";
 
 const MultiplePagePrintSecond = () => {
@@ -85,6 +86,9 @@ const grDataRow = [
   ["PYO|SNTP2.0-LGOPG-24", "Sandal Tapak 2.0 Barefoot Flip Flops Light Grey On Pebble Grey-24", "SNTP2.0-LGOPG-24", "278.000,00", "278.000", "0", "0", "500", "10", "10"],
 ];
 const ContentToPrint = () => {
+  const [isWithHeader, setIsWithHeader] = useState(true);
+  const [isPrintOptionOpen, setIsPrintOptionOpen] = useState(true);
+  const [isPrinting, setIsPrinting] = useState(false);
   const printRefToForward = useRef<HTMLDivElement>(null);
   const handlePrint = useReactToPrint({
     content: () => printRefToForward.current,
@@ -101,9 +105,48 @@ const ContentToPrint = () => {
   });
   return (
     <>
-      <div className="fixed bg-white border bottom-20 right-20">
-        <button className="px-4 py-1 bg-primary text-white rounded text-xl font-semibold" onClick={handlePrint}>
-          Print
+      <div className={`fixed bottom-20 right-10 px-4 py-2 bg-white border rounded-lg ${isPrintOptionOpen ? "w-72" : "w-fit"}`}>
+        {isPrintOptionOpen && (
+          <>
+            <div className="flex items-center justify-between">
+              <h1 className="text-xl font-bold">Print Option</h1>
+              <button className="text-xs text-secondary/75" onClick={() => setIsPrintOptionOpen(false)}>
+                Tutup
+              </button>
+            </div>
+            <ul className="my-4">
+              <li className="flex items-center gap-4">
+                <label htmlFor="withHeader">With Header?</label>
+                <input
+                  type="checkbox"
+                  name=""
+                  id="withHeader"
+                  checked={isWithHeader}
+                  onChange={(e) => {
+                    setIsWithHeader(e.target.checked);
+                  }}
+                  className="accent-secondary"
+                />
+              </li>
+              <li>
+                <Link className="text-secondary underline text-sm" href={"/"}>
+                  Go To Home Page
+                </Link>
+              </li>
+            </ul>
+          </>
+        )}
+        {!isPrintOptionOpen && (
+          <button className="text-xs text-secondary/75 mx-auto block mb-4" onClick={() => setIsPrintOptionOpen(true)}>
+            Buka
+          </button>
+        )}
+        <button
+          disabled={isPrinting}
+          onClick={handlePrint}
+          className="disabled:cursor-not-allowed font-semibold ml-auto w-fit block text-white bg-primary rounded-lg px-6 py-2 hover:bg-primary-light hover:text-primary duration-500"
+        >
+          {isPrinting ? "Loading" : "Print"}
         </button>
       </div>
       <div ref={printRefToForward} className="px-4 py-8">
