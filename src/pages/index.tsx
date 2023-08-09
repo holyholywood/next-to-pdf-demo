@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Inter } from "next/font/google";
 import { useReactToPrint } from "react-to-print";
 import { useRef, useState } from "react";
+import Link from "next/link";
 const fontInter = Inter({
   subsets: ["latin"],
 });
@@ -160,7 +161,11 @@ export default function Home() {
                   className="accent-secondary"
                 />
               </li>
-              <li></li>
+              <li>
+                <Link className="text-secondary underline text-sm" href={"/print/multiple-page-second"}>
+                  Go To Multiple Page
+                </Link>
+              </li>
             </ul>
           </>
         )}
